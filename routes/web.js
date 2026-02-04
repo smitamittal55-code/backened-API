@@ -1,9 +1,11 @@
 const express = require('express')
 const UserController = require('../controllers/UserController')
-const route = express.Router()
+const router = express.Router()
 
 
-route.get('/display',UserController.display)
+// UserController localhost:3000/api/register
+router.post('/register',UserController.register)
+router.post('/login',UserController.login)  
 
 
 
@@ -11,4 +13,4 @@ route.get('/display',UserController.display)
 
 
 
-module.exports = route
+module.exports = router  
