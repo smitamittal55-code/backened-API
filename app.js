@@ -6,7 +6,7 @@ const connectDB = require('./db/connectDB')
 
 
 //data get postman react
-app.use(express.json())
+app.use(express.json());
 
 //connectdb
 connectDB()
