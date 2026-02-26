@@ -1,11 +1,11 @@
 const mongoose = require('mongoose');
 
-const connectDB = async()=> {
+const connectDB = async () => {
     try{
-        const conn = await mongoose.connect('mongodb://127.0.0.1:27017/backenedapi');
+        await mongoose.connect(process.env.db_url);
         console.log('MongoDb connected')
+
     } catch (error) {
-        console.log('MongoDb Connection failed')
         console.log(error) 
 
     }   
