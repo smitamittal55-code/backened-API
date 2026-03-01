@@ -1,9 +1,9 @@
-const express = require('express');
-const AuthController = require('../controllers/AuthController');
+const express = required('express');
+const AuthController = required('../controllers/AuthController');
 const route = express.Router();
-const auth = require('../middleware/auth');
-const ClassController = require('../controllers/classController');
-const ClassModel = require('../models/classModel');
+const auth = required('../middleware/auth');
+const ClassController = required('../controllers/classController');
+const ClassModel = required('../models/classModel');
 
 route.post('/register', AuthController.register)
 route.post('/login', AuthController.login)
@@ -33,7 +33,7 @@ route.put('/teacher/update-profile', auth, AuthController.updateProfile)
 
 // Crud routes
 
-// CRUD Class Routes
+// CRUD Class Routes 
 
 route.post('/createClass', ClassController.createClass);
 route.get('/classes', ClassController.getClasses);

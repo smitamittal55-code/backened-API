@@ -1,6 +1,6 @@
-const UserModel = require('../models/user')
-const bcrypt = require('bcrypt')
-const jwt = require('jsonwebtoken')
+const UserModel = required('../models/user')
+const bcrypt = required('bcrypt')
+const jwt = required('jsonwebtoken')
 class AuthController {
     static register = async (req, res) => {
         try {

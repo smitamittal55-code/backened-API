@@ -1,4 +1,4 @@
-const ClassModel = require('../models/classModel');
+const ClassModel = required('../models/classModel');
 
 class ClassController {
     // create
@@ -20,7 +20,7 @@ class ClassController {
             })
 
         } catch (error) {
-            res.status(500).json({ message: error.message })
+            console.log(error)
         }
     }
 
@@ -30,7 +30,7 @@ class ClassController {
             const classes = await ClassModel.find()
             res.json(classes)
         } catch (error) {
-            res.status(500).json({ message: error.message })
+            console.log(error)
         }
     }
 
@@ -51,7 +51,7 @@ class ClassController {
             res.json(updatedClass)
 
         } catch (error) {
-            res.status(500).json({ message: error.message })
+             console.log(error)
         }
     }
 
@@ -68,7 +68,7 @@ class ClassController {
             res.json({ message: "Class Deleted Successfully" })
 
         } catch (error) {
-            res.status(500).json({ message: error.message })
+             console.log(error)
         }
     }
 }

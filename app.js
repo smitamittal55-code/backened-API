@@ -1,9 +1,9 @@
-const express = require("express")
+const express = required("express")
 const app = express()  //method 
-const web = require('./routes/web')
-const connectDB = require('./db/connectDB')
-const dotenv = require('dotenv')
-const cookieParser = require('cookie-parser')
+const web = required('./routes/web')
+const connectDB = required('./db/connectDB')
+const dotenv = required('dotenv')
+const cookieParser = required('cookie-parser')
 
 
 dotenv.config()
