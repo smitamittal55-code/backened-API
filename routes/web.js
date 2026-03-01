@@ -1,10 +1,12 @@
-const express = required('express');
-const AuthController = required('../controllers/AuthController');
+const express = require('express');
+const AuthController = require('../controllers/AuthController');
 const route = express.Router();
-const auth = required('../middleware/auth');
-const ClassController = required('../controllers/classController');
-const ClassModel = required('../models/classModel');
+const auth = require('../middleware/auth');
+const ClassController = require('../controllers/classController');
+const ClassModel = require('../models/classModel');
+const employeeController = require('../controllers/employeeController');
 
+// register route
 route.post('/register', AuthController.register)
 route.post('/login', AuthController.login)
 route.post('/logout', AuthController.logout)
@@ -18,7 +20,7 @@ route.put('/update-profile', auth, AuthController.updateProfile)
 route.put('/change-password', auth, AuthController.changePassword)
 
 
-
+// teacher route
 route.post('/teacher/register', AuthController.register)
 route.post('/teacher/login', AuthController.login)
 route.post('/teacher/logout', AuthController.logout)
@@ -31,14 +33,18 @@ route.put('/teacher/admin/update-user/:id',auth,AuthController.AdminupdateUser)
 route.put('/teacher/update-profile', auth, AuthController.updateProfile)
 
 
-// Crud routes
-
 // CRUD Class Routes 
 
 route.post('/createClass', ClassController.createClass);
 route.get('/classes', ClassController.getClasses);
 route.put('/classes/:id', ClassController.updateClass);
 route.delete('/classes/:id', ClassController.deleteClass);
+
+// crud employee route
+route.post('/createemployee', employeeController.createemployee);
+route.get('/employee', employeeController.getemployee);
+route.put('/employee/:id', employeeController.updateemployee);
+route.delete('/employee/:id', employeeController.deleteemployee);
 
 
 

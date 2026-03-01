@@ -1,4 +1,4 @@
-const ClassModel = required('../models/classModel');
+const ClassModel = require('../models/classModel');
 
 class ClassController {
     // create

@@ -1,6 +1,6 @@
-const UserModel = required('../models/user')
-const bcrypt = required('bcrypt')
-const jwt = required('jsonwebtoken')
+const UserModel = require('../models/user')
+const bcrypt = require('bcrypt')
+const jwt = require('jsonwebtoken')
 class AuthController {
     static register = async (req, res) => {
         try {
@@ -31,11 +31,11 @@ class AuthController {
                 password: hashPassword
             })
             res.status(201).json({
-                message: "User Register Successfully",
+                message: "User Register Successfully",  
                 user: {
                     id: result._id,
                     name: result.name,
-                    email: result.email
+                    email: result.email     
                 }
             })
 

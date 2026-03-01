@@ -1,6 +1,6 @@
-const TeacherModel = required('../models/teacher');
-const bcrypt = required('bcrypt');
-const jwt = required('jsonwebtoken');
+const TeacherModel = require('../models/teacher');
+const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
 
 class TeacherController {
     static register = async (req, res) => {

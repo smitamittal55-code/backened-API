@@ -1,16 +1,16 @@
 const mongoose = require('mongoose');
 
-const ClassSchema = new mongoose.Schema({
-    course: {
+const employeeSchema = new mongoose.Schema({
+    name: {
         type: String,   
         required: true
     },
-    semester: {
+    email: {
         type: String,
         required: true  
     },
    
 }, { timestamps: true })
 
-const ClassModel = mongoose.model('class', ClassSchema)   
-module.exports = ClassModel
+const employeeModel = mongoose.model('employee', employeeSchema)
+module.exports = employeeModel
